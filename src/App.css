@@ -12,12 +12,17 @@
   width: 3em;
 }
 
-.nav-link {
-  display: inline-block;
+.nav-link,
+footer p,
+.footer-link,
+footer i {
   transition: transform 0.2s ease-in-out;
+  cursor: pointer;
 }
 
-.nav-link:hover {
+.nav-link:hover,
+footer p:hover,
+.footer-link:hover {
   transform: scale(0.93);
 }
 
