@@ -14,6 +14,7 @@ import MyProfileSubtitle from "./components/main/profilePage/MyProfileSubtitle";
 import MyProfileDropDown from "./components/main/profilePage/MyProfileDropDown";
 import MyProfileButtons from "./components/main/profilePage/MyProfileButtons";
 import MyProfileCheckBox from "./components/main/profilePage/MyProfileCheckBox";
+import MyHero from "./components/main/heroSection/MyHero";
 
 // Trasformato App in una classe, mi serve lo state
 // Sembra che non ho rotto nulla, quindi la lascio a classe
@@ -53,6 +54,7 @@ class App extends Component {
               <MyNavbar />
             </header>
             <main className="flex-grow-1">
+              <MyHero />
               <section
                 id="genres"
                 className="d-flex align-items-center justify-content-between py-3 mx-2"

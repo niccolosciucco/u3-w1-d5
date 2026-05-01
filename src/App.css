@@ -52,3 +52,33 @@ footer i {
   width: 70%;
   margin: 0 auto;
 }
+
+.netflix-hero {
+  min-height: 80vh;
+  position: relative;
+  background-color: #141414;
+
+  background-image:
+    linear-gradient(to right, rgba(0, 0, 0, 0.9) 10%, rgba(0, 0, 0, 0) 70%),
+    linear-gradient(to top, #141414 0%, transparent 20%),
+    url("./friends-background.jpg");
+
+  background-size: cover;
+  background-position: center 20%;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  color: white;
+}
+
+.btn-netflix-light {
+  background-color: white !important;
+  color: black !important;
+  border: none !important;
+}
+
+.btn-netflix-dark {
+  background-color: rgba(109, 109, 110, 0.7) !important;
+  color: white !important;
+  border: none !important;
+}
