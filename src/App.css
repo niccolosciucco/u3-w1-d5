@@ -17,7 +17,6 @@ footer p,
 .footer-link,
 footer i {
   transition: transform 0.2s ease-in-out;
-  cursor: pointer;
 }
 
 .nav-link:hover,
@@ -32,4 +31,19 @@ footer section {
 }
 footer i {
   font-size: 2em;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.carousel-poster {
+  display: inline-block !important;
+  position: relative;
+  z-index: 1;
+}
+
+.carousel-poster:hover {
+  transform: scale(0.93) !important;
+  z-index: 10;
 }
