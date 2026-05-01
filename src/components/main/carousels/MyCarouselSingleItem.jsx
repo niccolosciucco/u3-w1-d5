@@ -1,10 +1,11 @@
 import { Component } from "react";
-import { Col, Spinner } from "react-bootstrap";
+import { Col, Spinner, Alert } from "react-bootstrap";
 
 class MyCarouselSingleItem extends Component {
   state = {
     movies: [],
     isLoading: true,
+    error: false,
   };
 
   getItems = () => {
@@ -24,6 +25,10 @@ class MyCarouselSingleItem extends Component {
       })
       .catch((err) => {
         console.log("Server Error", err);
+        this.setState({
+          error: true,
+          isLoading: false,
+        });
       });
   };
 
@@ -42,6 +47,14 @@ class MyCarouselSingleItem extends Component {
             <span className="visually-hidden">Loading...</span>
           </Spinner>
         </Col>
+      );
+    }
+
+    if (this.state.error) {
+      return (
+        <Alert key="danger" variant="danger">
+          Server Error
+        </Alert>
       );
     }
 
