@@ -5,6 +5,7 @@ import MyFooter from "./components/footer/MyFooter";
 import MyDropDownGenres from "./components/main/genresAndVisualization/MyDropDownGenres";
 import MyVisualization from "./components/main/genresAndVisualization/MyVisualization";
 import MyCarousel from "./components/main/carousels/MyCarousel";
+import MyCarouselTitle from "./components/main/carousels/MyCarouselTitle";
 
 function App() {
   return (
@@ -22,13 +23,13 @@ function App() {
         </section>
 
         <section className="mx-2">
-          <h4 className="text-white">Trending Now</h4>
+          <MyCarouselTitle title="Only on Netflix" />
           <MyCarousel titles={["Avengers", "Harry Potter"]} />
 
-          <h4 className="text-white">Watch it Again</h4>
+          <MyCarouselTitle title="Watch it Again" />
           <MyCarousel titles={["Star Wars", "Fast and furious"]} />
 
-          <h4 className="text-white">Trending</h4>
+          <MyCarouselTitle title="Trending Now" />
           <MyCarousel titles={["Mission Impossible", "Saw"]} />
         </section>
       </main>
