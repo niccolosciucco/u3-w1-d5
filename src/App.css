@@ -1,0 +1,22 @@
+#main-div {
+  background-color: rgba(20, 20, 20);
+}
+
+#logo-netflix {
+  height: auto;
+  width: 6em;
+}
+
+#avatar {
+  height: auto;
+  width: 3em;
+}
+
+.nav-link {
+  display: inline-block;
+  transition: transform 0.2s ease-in-out;
+}
+
+.nav-link:hover {
+  transform: scale(1.13);
+}
