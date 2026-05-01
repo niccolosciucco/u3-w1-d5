@@ -47,3 +47,8 @@ footer i {
   transform: scale(0.93) !important;
   z-index: 10;
 }
+
+#profile-main-section {
+  width: 70%;
+  margin: 0 auto;
+}

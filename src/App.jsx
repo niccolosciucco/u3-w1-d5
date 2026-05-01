@@ -6,8 +6,14 @@ import MyDropDownGenres from "./components/main/genresAndVisualization/MyDropDow
 import MyVisualization from "./components/main/genresAndVisualization/MyVisualization";
 import MyCarousel from "./components/main/carousels/MyCarousel";
 import MyCarouselTitle from "./components/main/carousels/MyCarouselTitle";
-import { Alert, Button } from "react-bootstrap";
+import { Alert, Button, Container, Row, Col } from "react-bootstrap";
 import { Component } from "react";
+import MyProfileTitle from "./components/main/profilePage/MyProfileTitle";
+import MyProfileAvatar from "./components/main/profilePage/MyProfileAvatar";
+import MyProfileSubtitle from "./components/main/profilePage/MyProfileSubtitle";
+import MyProfileDropDown from "./components/main/profilePage/MyProfileDropDown";
+import MyProfileButtons from "./components/main/profilePage/MyProfileButtons";
+import MyProfileCheckBox from "./components/main/profilePage/MyProfileCheckBox";
 
 // Trasformato App in una classe, mi serve lo state
 // Sembra che non ho rotto nulla, quindi la lascio a classe
@@ -85,8 +91,79 @@ class App extends Component {
 
         {this.state.isProfile && (
           <>
-            <header></header>
-            <main className="flex-grow-1"></main>
+            <header>
+              <MyNavbar />
+            </header>
+            <main className="flex-grow-1">
+              <section id="profile-main-section">
+                <Container>
+                  <MyProfileTitle title="Edit Profile" />
+
+                  <Row class="row mt-3 border-bottom border-secondary">
+                    <MyProfileAvatar />
+                    <Col xs={12} md={9} className="p-0 mb-3">
+                      <MyProfileSubtitle text="Strive Student" />
+                      <MyProfileDropDown />
+
+                      <div className="mt-3">
+                        {" "}
+                        <MyProfileSubtitle text="Maturity Settings" />
+                      </div>
+
+                      <div>
+                        <MyProfileButtons text="ALL MATURITY RATINGS" />
+                      </div>
+                      <div>
+                        <p className="mt-3 text-white">
+                          Show title of <strong>all maturity ratings</strong>{" "}
+                          for this profile.
+                        </p>
+                      </div>
+                      <div>
+                        <MyProfileButtons text="EDIT" />
+                      </div>
+
+                      <div class="border-top border-secondary mt-4">
+                        <MyProfileSubtitle text="Autoplay control" />
+                      </div>
+                      <MyProfileCheckBox
+                        text={[
+                          "Autoplay next episode in a series on all devices.",
+                          "Autoplay previews while browsing on all devices.",
+                        ]}
+                      />
+                    </Col>
+                  </Row>
+                </Container>
+
+                <Container className="mt-3 px-0">
+                  <Row className="g-3">
+                    {" "}
+                    <Col
+                      xs={12}
+                      lg={4}
+                      className="d-flex justify-content-center justify-content-lg-start"
+                    >
+                      <MyProfileButtons text="SAVE" />
+                    </Col>
+                    <Col
+                      xs={12}
+                      lg={4}
+                      className="d-flex justify-content-center"
+                    >
+                      <MyProfileButtons text="CANCEL" />
+                    </Col>
+                    <Col
+                      xs={12}
+                      lg={4}
+                      className="d-flex justify-content-center justify-content-lg-end"
+                    >
+                      <MyProfileButtons text="DELETE PROFILE" />
+                    </Col>
+                  </Row>
+                </Container>
+              </section>
+            </main>
             <footer>
               <Button
                 variant="dark"
@@ -106,7 +183,9 @@ class App extends Component {
 
         {this.state.isSetting && (
           <>
-            <header></header>
+            <header>
+              <MyNavbar />
+            </header>
             <main className="flex-grow-1"></main>
             <footer>
               <Button
