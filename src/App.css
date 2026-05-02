@@ -54,21 +54,48 @@ footer i {
 }
 
 .netflix-hero {
-  min-height: 80vh;
+  min-height: 85vh;
   position: relative;
   background-color: #141414;
-
   background-image:
-    linear-gradient(to right, rgba(0, 0, 0, 0.9) 10%, rgba(0, 0, 0, 0) 70%),
-    linear-gradient(to top, #141414 0%, transparent 20%),
+    linear-gradient(to right, rgba(0, 0, 0, 0.8) 10%, rgba(0, 0, 0, 0) 70%),
+    linear-gradient(to top, rgba(20, 20, 20, 1) 0%, rgba(20, 20, 20, 0) 25%),
     url("./friends-background.jpg");
-
   background-size: cover;
   background-position: center 20%;
   background-repeat: no-repeat;
   display: flex;
   align-items: center;
-  color: white;
+  transition: all 0.3s ease-in-out;
+}
+
+@media (max-width: 767.98px) {
+  .netflix-hero {
+    min-height: 60vh;
+    background-position: center center;
+
+    background-image:
+      linear-gradient(
+        to top,
+        rgba(20, 20, 20, 1) 15%,
+        rgba(20, 20, 20, 0.4) 100%
+      ),
+      url("./friends-background.jpg");
+
+    padding-top: 60px;
+    align-items: flex-end;
+    padding-bottom: 40px;
+  }
+
+  .netflix-hero img {
+    max-width: 200px !important;
+    margin-bottom: 1rem !important;
+  }
+
+  .netflix-hero p {
+    font-size: 1rem !important;
+    line-height: 1.4;
+  }
 }
 
 .btn-netflix-light {
